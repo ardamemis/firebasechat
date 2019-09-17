@@ -18,7 +18,7 @@ $(document).ready(function(){
         var email = $("#email").val();
         var password = $("#password").val();
 
-        firebase.auth().signInWithUsernameAndPassword(email, password)
+        firebase.auth().signInWithEmailAndPassword(email, password)
             .then(function(){
                 window.location.href = "index.html";
             }).catch(function(error){

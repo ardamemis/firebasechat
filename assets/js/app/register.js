@@ -18,7 +18,7 @@ $(document).ready(function(){
         var email = $("#email").val();
         var password = $("#password").val();
 
-        firebase.auth().createUserWithUsernameAndPassword(email, password)
+        firebase.auth().createUserWithEmailAndPassword(email, password)
             .then(function(){
 
                 firebase.auth().signInWithEmailAndPassword(email, password)
